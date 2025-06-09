@@ -1,8 +1,12 @@
-export default function Home() {
+// Sidebar.jsx
+import Navbar from '../components/Navbar';
+import Sidebar from '../components/Sidebar';
 
-    return (
-        <div>
-            <h1>Welcome to the Home Page</h1>
-        </div>
-    );
+export default function Home() {
+  return (
+    <> 
+    <Navbar />
+    <Sidebar />
+    </>
+  );
 }
