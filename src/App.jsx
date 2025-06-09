@@ -1,16 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router";
 
 
-function App() {
-  const [count, setCount] = useState(0)
+import Home from "./pages/Home";
+import EditBook from "./pages/EditBook";
+import LoginPage from "./pages/LoginPage";
+import NotFound from "./pages/NotFound";
+import CreateBook from "./pages/CreateBook";
+import BookPage from "./pages/BookPage";
+import ViewBook from "./pages/ViewBook";
+
+
+const router = createBrowserRouter([
+  { path: "/", element: <Home /> },
+  { path: "/login-page", element: <LoginPage /> },
+  { path: "/book-page", element: <BookPage /> },
+  { path: "/view-book", element: <ViewBook /> },
+  { path: "/edit-book", element: <EditBook /> },
+  { path: "/create-book", element: <CreateBook /> },
+  { path: "*", element: <NotFound /> },
+]);
+
+
+
+export default function App() {
 
   return (
     <>
-     <h1 className='font-bold text-red-800'>Welcome to Team Bambi</h1>
+      <RouterProvider router={router} />
     </>
   )
 }
 
-export default App
+
