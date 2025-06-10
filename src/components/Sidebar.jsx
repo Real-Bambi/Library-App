@@ -1,4 +1,5 @@
 import { Home, Search, LibraryBig, HandHeart } from 'lucide-react';
+import { Link } from "react-router";
 
 export default function Sidebar() {
 return (
@@ -15,28 +16,28 @@ return (
 
       
       <nav className="space-y-6 text-sm font-bold text-gray-700">
-        <a href="#" className="flex items-center gap-3 hover:text-orange-500">
+        <Link to="#" className="flex items-center gap-3 hover:text-orange-500">
          <Home /> Home
-        </a>
-        <a href="#" className="flex items-center gap-3 hover:text-orange-500">
+        </Link>
+        <Link to="#" className="flex items-center gap-3 hover:text-orange-500">
           <Search /> Search
-        </a>
-        <a href="#" className="flex items-center gap-3 hover:text-orange-500">
+        </Link>
+        <Link to="#" className="flex items-center gap-3 hover:text-orange-500">
            <LibraryBig /> My Shelf
-        </a>
-        <a href="#" className="flex items-center gap-3 hover:text-orange-500">
+        </Link>
+        <Link to="#" className="flex items-center gap-3 hover:text-orange-500">
            <HandHeart /> Contribute
-        </a>
+        </Link>
       </nav>
     </div>
 
     
     <div class="space-y-2 text-xs text-gray-600 py-60">
-      <a href="#" className="hover:text-orange-500 block">About</a>
-      <a href="#" className="hover:text-orange-500 block">Support</a>
-      <a href="#" className="hover:text-orange-500 block">Terms & Condition</a>
+      <Link to="#" className="hover:text-orange-500 block">About</Link>
+      <Link to="#" className="hover:text-orange-500 block">Support</Link>
+      <Link to="#" className="hover:text-orange-500 block">Terms & Condition</Link>
     </div>
 
   </aside>
-)
+);
 }

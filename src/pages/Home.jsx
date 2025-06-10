@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
+import NotFound from "../pages/NotFound";
 
 
 export default function Home() {
@@ -8,8 +9,7 @@ export default function Home() {
         
         <div>
             <Navbar />
-            <h1>GOOD</h1>
-            <Sidebar />
+           
             
         </div>
     );
