@@ -14,8 +14,9 @@ const book = {
 const ViewBook = () => {
   return (
     <> 
-    <Sidebar />
-    <div className="min-h-screen bg-gray-100 text-gray-700 p-6 flex items-center justify-center">
+    
+    <div className="min-h-screen bg-gray-100 text-gray-700 flex items-center justify-center">
+        <Sidebar />
       <div className="bg-white rounded-lg overflow-hidden shadow-lg w-full max-w-3xl">
         <img
           src={book.image}
