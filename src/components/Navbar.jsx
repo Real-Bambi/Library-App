@@ -1,42 +1,50 @@
-import { } from 'lucide-react';
+import React, { useState } from 'react';
+import { LibraryBig, Search, User, Menu, X } from 'lucide-react';
 
-export default function Navbar() {
+export default function LibraryNavbar() {
+    const [mobileOpen, setMobileOpen] = useState(false);
+
     return (
-        <nav className="flex justify-between">
+        <nav className="bg-white shadow-md px-6 py-4">
+            <div className="max-w-7xl mx-auto flex items-center justify-between">
 
 
 
-            <select name="type" id="type" className=" flex items-center border-none shadow-lg bg-gray-100 rounded-full">
-                <option selected disabled>Categories</option>
-                <option value="drama">Fiction</option>
-                <option value="drama">Horror</option>
-                <option value="drama">Non Fiction</option>
-                <option value="drama">Drama</option>
+                <div className="hidden md:flex items-center gap-8 text-gray-700">
+                    <a href="#" className="hover:text-indigo-600">
+                        <select name="" id="" className='border-none outline-none'><option disabled selected>Categories</option>
+                            <option value="">Fiction</option>
+                            <option value="">Horror</option>
+                            <option value="">Non Fiction</option>
+                            <option value="">Drama</option>
 
-            </select>
-            <div><input type="text" placeholder="Search" class="bg-white outline-none px-2 w-full text-sm" /></div>
-            <i class="fa fa-sliders text-gray-500 ml-2"></i>
+                        </select>
+                    </a>
 
-
-
-
-            <div class="flex items-center gap-2 bg-gray-100 px-3 py-2 rounded-full text-sm">
-                <i class="fa fa-clock text-red-400"></i>
-                <input type="time" placeholder='09:00 AM' />
-            </div>
+                </div>
 
 
-            <div class="bg-gray-100 px-3 py-2 rounded-full text-sm">
-                <input type="date" name="" id="" />
-            </div>
+                <div className="hidden md:flex items-center gap-4">
+                    <input type="text" placeholder="Search books..." className="bg-transparent focus:outline-none w-full md:w-64 text-sm"/>
+
+                    <Search className="w-5 h-5 text-gray-600 hover:text-indigo-600 cursor-pointer" />
 
 
-            <div>
-                <button class="flex items-center gap-2 bg-gray-100 px-3 py-2 rounded-full text-sm">
-                    <img src="https://i.pravatar.cc/30?img=12" alt="User" class="h-6 w-6 rounded-full" />
-                    Kenson <i class="fa fa-chevron-down text-xs"></i>
+                    <User className="w-5 h-5 text-gray-600 hover:text-indigo-600 cursor-pointer" />
+                </div>
+
+
+                <button onClick={() => setMobileOpen(!mobileOpen)} className="md:hidden">
+                    {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                 </button>
             </div>
+
+
+            {mobileOpen && (
+                <div className="md:hidden mt-4 flex flex-col gap-4 text-gray-700">
+                    <a href="#" className="hover:text-indigo-600">Categories</a>
+                </div>
+            )}
         </nav>
-    )
+    );
 }

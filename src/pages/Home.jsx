@@ -1,10 +1,16 @@
+import Navbar from "../components/Navbar";
+import Sidebar from "../components/Sidebar";
 
 
 export default function Home() {
 
     return (
+        
         <div>
-            <h1>Welcome to the Home Page</h1>
+            <Navbar />
+            <h1>GOOD</h1>
+            <Sidebar />
+            
         </div>
     );
 }
