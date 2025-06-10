@@ -1,7 +1,13 @@
+import Navbar from "../components/Navbar";
+import Sidebar from "../components/Sidebar";
+
 export default function CreateBook() {
 
 
     return (
+        <>
+        <Navbar/>
+        <Sidebar/>
         <div className="flex flex-row w-[90%] gap-x-20 m-auto pt-10">
             <div className="w-[50%]">
                 <form className="bg-white p-8 rounded-lg shadow-md border border-gray-300  mx-auto py-6 px-10 flex flex-col  ">
@@ -50,7 +56,7 @@ export default function CreateBook() {
             </div>
         </div>
 
-
+    </>
 
     );
 }
