@@ -14,21 +14,21 @@ export default function CreateBook() {
                     <div className="text-3xl font-bold m-auto"><h1>Fill Up Book Details</h1></div>
                     <div className="flex flex-col p-4">
                         <label htmlFor="type">Book Name</label>
-                        <input type="text" name="bookname" id="bookname" placeholder="Enter Book Name"  className=" p-2 rounded-md"/>
+                        <input type="text" name="bookname" id="bookname" placeholder="Enter Book Name"  className="  border p-2 rounded-md"/>
                     </div>
                     <div className="flex flex-col p-4">
                         <label htmlFor="type">Author's Name</label>
-                        <input type="text" name="author name" placeholder="Enter Author's Name" className=" p-2 rounded-md" />
+                        <input type="text" name="author name" placeholder="Enter Author's Name" className=" p-2 rounded-md border" />
                     </div>
                     <div className="flex flex-row px-4 py-2 justify-between">
                         <div className="flex flex-col">
                             <label htmlFor="type">ISB Number</label>
-                            <input type="number" name="Booknumber" placeholder="Enter ISB Number" className=" p-2 rounded-md"  />
+                            <input type="number" name="Booknumber" placeholder="Enter ISB Number" className=" p-2 rounded-md border"  />
                         </div>
 
                         <div className="flex flex-col p-4">
-                            <select name="Genre" id="" placeholder="Enter Book Name" className=" p-2 rounded-md" >
-                                <option selected disabled>Choose Genre</option>
+                            <select name="Genre" id="" placeholder="Enter Book Name" className=" p-2 rounded-md border" >
+                                <option selected disabled >Choose Genre</option>
                                 <option value="drama">Horror</option>
                                 <option value="horror">Horror</option>
                                 <option value="fiction">Fiction</option>
@@ -41,12 +41,12 @@ export default function CreateBook() {
 
                     <div className="flex flex-col p-4">
                         <label htmlFor="type">Book Name</label>
-                        <textarea name="bookdescription" placeholder="Enter Book Description"  className=" p-2  pb-40 rounded-md " />
+                        <textarea name="bookdescription" placeholder="Enter Book Description"  className=" p-2  pb-40 rounded-md border " />
                     </div>
 
 
                     <div>
-                        <button type="submit" className="  bg-amber-600 py-2 px-6 font-bold p-4 rounded-md">Submit </button>
+                        <button type="submit" className="  bg-amber-600 py-2 px-6 font-bold p-4 rounded-md">Add Book </button>
                     </div>
                 </form>
             </div>
