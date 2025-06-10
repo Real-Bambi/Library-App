@@ -25,7 +25,9 @@ const cards = [
 
     return (
 
-        <div className="bg-[url(./assets/images/booklib.jpg))] bg-cover h-full ">
+      <div className='relative h-full'>
+        {/* <div className="absolute inset-1 bg-gradient-to-r from-black-700 via-black/50 to-black/90 z-2"></div> */}
+          <div className="backdrop-blur-md bg-[url(./assets/images/booklib.jpg))] bg-cover ">
             <Navbar />
 
             <div >
@@ -36,7 +38,7 @@ const cards = [
             <div className="flex  justify-center pt-6">
                 <button className="bg-red-800 hover:bg-red-400 px-6 py-2 rounded text-white">VIEW HERE</button>
             </div>
-            <div className='w-[80%] grid grid-cols-3 gap-4 pt-8 mx-auto '>
+            <div className='w-[80%] grid grid-cols-3 gap-4  pt-8 mx-auto '>
                 {cards.map(item  => {
                     return (
                         <HomeCard key={item.id} image={item.image} title={item.title} />
@@ -47,5 +49,6 @@ const cards = [
 
 
         </div>
+      </div>
     );
 }
