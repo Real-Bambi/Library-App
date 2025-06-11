@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { LibraryBig, Search, User, Menu, X, Plus, View, Trash } from 'lucide-react';
+import { LibraryBig, Search, User, Menu, X, Plus, View, ReceiptText } from 'lucide-react';
 import { Link } from "react-router";
 
 export default function LibraryNavbar() {
@@ -14,22 +14,22 @@ export default function LibraryNavbar() {
                     <Link to="#" className="hover:text-indigo-600">
                         <select name="" id="" className='border-none outline-none'><option disabled selected>Categories</option>
                             <option value="">Fiction</option>
-                            <option value="">Horror</option>
-                            <option value="">Non Fiction</option>
-                            <option value="">Drama</option>
-                            <option value="">Thriller</option>
-                            <option value="">Sci-Fic</option>
+                            <option value="">History</option>
+                            <option value="">Science</option>
+                            <option value="">Romance</option>
+                            <option value="">Fantasy</option>
+                            <option value="">Programming</option>
                         </select>
                     </Link>
 
                     <span className='gap-0 flex '><Plus className="w-5 h-5 text-gray-600 hover:text-indigo-600 cursor-pointer ml-20" />
-                        <Link to="#" className="hover:text-indigo-600">Add Book</Link></span>
+                        <Link to="/create-book" className="hover:text-indigo-600">Add Book</Link></span>
 
                     <span className='gap-0 flex hover:text-indigo-600'><View className="w-5 h-5 text-gray-600 cursor-pointer" />
-                        <Link to="#" className="hover:text-indigo-600">View Book</Link></span>
+                        <Link to="/view-book" className="hover:text-indigo-600">View Book</Link></span>
 
-                    <span className='gap-0 flex hover:text-indigo-600'><Trash className="w-5 h-5 text-gray-600 cursor-pointer" />
-                        <Link to="#" className="hover:text-indigo-600">Delete Book</Link></span>
+                    <span className='gap-0 flex hover:text-indigo-600'><receipt-text className="w-5 h-5 text-gray-600 cursor-pointer" />
+                        <Link to="/book-page" className="hover:text-indigo-600">All Books</Link></span>
                 </div>
 
 
