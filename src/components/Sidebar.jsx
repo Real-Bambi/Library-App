@@ -5,7 +5,7 @@ export default function Sidebar() {
 return (
     
  
-  <aside className="w-64 bg-white text-black flex flex-col justify-between py-8 px-6 rounded-tr-2xl rounded-br-2xl shadow-xl shadow-blue-300">
+  <aside className="w-64 h-[88vh] bg-white text-black flex flex-col justify-between py-8 px-6 rounded-tr-2xl rounded-br-2xl shadow-xl shadow-blue-300">
     <div>
       <div className="mb-10 text-left">
         <h1 className="text-xl leading-none italic tracking-wide">
@@ -32,7 +32,7 @@ return (
     </div>
 
     
-    <div class="space-y-2 text-xs text-gray-600 py-60">
+    <div class="space-y-2 text-xs text-gray-600 py-30">
       <Link to="#" className="hover:text-orange-500 block">About</Link>
       <Link to="#" className="hover:text-orange-500 block">Support</Link>
       <Link to="#" className="hover:text-orange-500 block">Terms & Condition</Link>

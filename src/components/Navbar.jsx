@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { LibraryBig, Search, User, Menu, X, Plus, View } from 'lucide-react';
+import { LibraryBig, Search, User, Menu, X, Plus, View, Trash } from 'lucide-react';
 import { Link } from "react-router";
 
 export default function LibraryNavbar() {
@@ -17,24 +17,27 @@ export default function LibraryNavbar() {
                             <option value="">Horror</option>
                             <option value="">Non Fiction</option>
                             <option value="">Drama</option>
+                            <option value="">Thriller</option>
+                            <option value="">Sci-Fic</option>
                         </select>
                     </Link>
 
                     <span className='gap-0 flex '><Plus className="w-5 h-5 text-gray-600 hover:text-indigo-600 cursor-pointer ml-20" />
-                    <Link to="#" className="hover:text-indigo-600">Add Book</Link></span>
+                        <Link to="#" className="hover:text-indigo-600">Add Book</Link></span>
 
                     <span className='gap-0 flex hover:text-indigo-600'><View className="w-5 h-5 text-gray-600 cursor-pointer" />
-                    <Link to="#" className="hover:text-indigo-600">View Book</Link></span>
+                        <Link to="#" className="hover:text-indigo-600">View Book</Link></span>
 
-                    <Link to="#" className="hover:text-indigo-600">Pages</Link>
+                    <span className='gap-0 flex hover:text-indigo-600'><Trash className="w-5 h-5 text-gray-600 cursor-pointer" />
+                        <Link to="#" className="hover:text-indigo-600">Delete Book</Link></span>
                 </div>
 
 
                 <div className="hidden md:flex items-center gap-6">
                     <div className='flex'><input type="text" placeholder="Search books..." className="bg-transparent focus:outline-none w-full md:w-64 text-sm" />
-                    <Search className="w-5 h-5 text-gray-600 hover:text-indigo-600 cursor-pointer" /></div>
+                        <Search className="w-5 h-5 text-gray-600 hover:text-indigo-600 cursor-pointer" /></div>
 
-                    <button className='p-2 rounded-b-lg bg-[#F86F55] ml-10'><a href="#">LOGIN</a></button>
+                    <button className='p-2 rounded-[10px] bg-[#F86F55] ml-10'><a href="#">LOGIN</a></button>
                     <User className="w-5 h-5 text-gray-600 hover:text-indigo-600 cursor-pointer" />
                 </div>
 
