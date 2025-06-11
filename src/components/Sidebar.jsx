@@ -16,16 +16,16 @@ return (
 
       
       <nav className="space-y-6 text-sm font-bold text-gray-700">
-        <Link to="#" className="flex items-center gap-3 hover:text-orange-500">
+        <Link to="/" className="flex items-center gap-3 hover:text-orange-500">
          <Home /> Home
         </Link>
         <Link to="#" className="flex items-center gap-3 hover:text-orange-500">
           <Search /> Search
         </Link>
-        <Link to="#" className="flex items-center gap-3 hover:text-orange-500">
+        <Link to="/book-page" className="flex items-center gap-3 hover:text-orange-500">
            <LibraryBig /> My Shelf
         </Link>
-        <Link to="#" className="flex items-center gap-3 hover:text-orange-500">
+        <Link to="/create-book" className="flex items-center gap-3 hover:text-orange-500">
            <HandHeart /> Contribute
         </Link>
       </nav>

@@ -8,6 +8,7 @@ import HorrorImage from '../assets/images/horror.jpg';
 import ThrillerImage from '../assets/images/thriller.jpg';
 import SciFiImage from '../assets/images/sci-fi.jpg';
 import DramaImage from '../assets/images/drama.jpg';
+import { Link } from 'react-router';
 
 
 
@@ -19,7 +20,7 @@ const cards = [
   { id: 2, image: NonFictionImage, title: "Non-Fiction" },
   { id: 3, image: HorrorImage, title: "Horror" },
   { id: 4, image: ThrillerImage, title: "Thriller" },
-  { id: 5, image: SciFiImage, title: "Sci-Fi" },
+  { id: 5, image: SciFiImage, title: "Sci-Fic" },
   { id: 6, image: DramaImage, title: "Drama" },
 ];
 
@@ -27,7 +28,7 @@ const cards = [
 
       <div className='relative h-full'>
         {/* <div className="absolute inset-1 bg-gradient-to-r from-black-700 via-black/50 to-black/90 z-2"></div> */}
-          <div className="backdrop-blur-md bg-[url(./assets/images/booklib.jpg))] bg-cover ">
+          <div className=" bg-[url(./assets/images/booklib.jpg))] bg-cover ">
             <Navbar />
 
             <div >
@@ -36,7 +37,7 @@ const cards = [
                 {/* <ArrowBigDown className=' flex flex-col size-30 items-center text-red-400 animate-bounce'/> */}
             </div>
             <div className="flex  justify-center pt-6">
-                <button className="bg-red-800 hover:bg-red-400 px-6 py-2 rounded text-white">VIEW HERE</button>
+              <Link to={'/book-page'}><button className="bg-red-800 hover:bg-red-400 px-6 py-2 rounded text-white">VIEW HERE</button></Link>
             </div>
             <div className='w-[80%] grid grid-cols-3 gap-4  pt-8 mx-auto '>
                 {cards.map(item  => {
