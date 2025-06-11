@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { LibraryBig, Search, User, Menu, X, Plus, View, ReceiptText } from 'lucide-react';
+import { LibraryBig, Search, User, Menu, X, Plus, View } from 'lucide-react';
 import { Link } from "react-router";
 
 export default function LibraryNavbar() {
@@ -22,14 +22,12 @@ export default function LibraryNavbar() {
                         </select>
                     </Link>
 
-                    <span className='gap-0 flex '><Plus className="w-5 h-5 text-gray-600 hover:text-indigo-600 cursor-pointer ml-20" />
-                        <Link to="/create-book" className="hover:text-indigo-600">Add Book</Link></span>
+                    <span className='gap-0 flex '><Plus className="w-5 h-5 text-gray-600 hover:text-indigo-600 cursor-pointer ml-20 font-bold" />
+                        <Link to="/create-book" className="hover:text-indigo-600 font-bold">Add Book</Link></span>
 
-                    <span className='gap-0 flex hover:text-indigo-600'><View className="w-5 h-5 text-gray-600 cursor-pointer" />
-                        <Link to="/view-book" className="hover:text-indigo-600">View Book</Link></span>
-
-                    <span className='gap-0 flex hover:text-indigo-600'><receipt-text className="w-5 h-5 text-gray-600 cursor-pointer" />
-                        <Link to="/book-page" className="hover:text-indigo-600">All Books</Link></span>
+                    
+                    <span className='gap-0 flex hover:text-indigo-600'><View className="w-5 h-5 text-gray-600 cursor-pointer font-bold" />
+                        <Link to="/book-page" className="hover:text-indigo-600 font-bold">All Books</Link></span>
                 </div>
 
 
