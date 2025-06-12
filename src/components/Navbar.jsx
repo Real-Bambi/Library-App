@@ -23,12 +23,6 @@ export default function LibraryNavbar() {
                         </select>
                     </Link>
 
-                    <span className='gap-0 flex  hover:text-[#FBDB93]'><Plus className="w-5 h-5 text-gray-900 cursor-pointer ml-20 font-bold" />
-                        <Link to="/create-book" className="font-bold">Add Book</Link></span>
-
-
-                    <span className='gap-0 flex hover:text-[#FBDB93]'><View className="w-5 h-5 text-gray-900 cursor-pointer font-bold" />
-                        <Link to="/book-page" className="font-bold">All Books</Link></span>
                 </div>
 
 
