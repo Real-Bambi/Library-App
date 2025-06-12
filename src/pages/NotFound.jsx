@@ -1,4 +1,4 @@
-import NotFoundImg from "../assets/images/404.jpg";
+import NotFoundImg from "../assets/images/404.png";
 import { ArrowBigDownDash } from "lucide-react";
 import { Link } from "react-router"; 
 
@@ -7,7 +7,7 @@ export default function NotFound() {
     <div className="flex flex-col items-center justify-center min-h-screen px-4 bg-white">
       
       <div
-        className="w-full max-w-md h-96 bg-cover bg-center animate-pulse rounded-lg shadow-lg relative"
+        className="w-full max-w-md h-96 bg-cover bg-center animate-pulse  relative"
         style={{ backgroundImage: `url(${NotFoundImg})` }}
       >
        
