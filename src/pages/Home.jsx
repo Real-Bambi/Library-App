@@ -1,5 +1,4 @@
 
-import Navbar from '../components/Navbar.jsx';
 import { ArrowBigDown } from 'lucide-react';
 import HomeCard from '../components/HomeCard.jsx';
   import FictionImage from '../assets/images/Fiction.jpg';
@@ -28,21 +27,22 @@ const cards = [
 
       <div className='relative h-full'>
         {/* <div className="absolute inset-1 bg-gradient-to-r from-black-700 via-black/50 to-black/90 z-2"></div> */}
-          <div className=" bg-[url(./assets/images/booklib.jpg))] bg-cover ">
-            <Navbar />
+        
+          <div className="  bg-[url('./assets/images/booklib.jpg'))] bg-cover ">
+          
 
             <div >
-                <h1 className="font-bold text-center text-6xl pt-10"><span className="text-black">Welcome to</span> <span className="text-red-700 "> BOOK SHELF</span>.</h1>
+                <h1 className="font-bold text-center text-6xl pt-10"><span className="text-black">Welcome to</span> <span className="text-orange-700 "> BOOK SHELF</span>.</h1>
                 <h2 className='font-medium text-center text-5xl pt-10'>Discover the best books <span className="text-white">HERE!</span></h2>
                 {/* <ArrowBigDown className=' flex flex-col size-30 items-center text-red-400 animate-bounce'/> */}
             </div>
             <div className="flex  justify-center pt-6">
-              <Link to={'/book-page'}><button className="bg-red-800 hover:bg-red-400 px-6 py-2 rounded text-white">VIEW HERE</button></Link>
+              <Link to={'/book-page'}><button className="bg-orange-800 hover:bg-orange-500 px-6 py-2 rounded text-white">VIEW HERE</button></Link>
             </div>
             <div className='w-[80%] grid grid-cols-3 gap-4  pt-8 mx-auto '>
                 {cards.map(item  => {
                     return (
-                        <HomeCard key={item.id} image={item.image} title={item.title} />
+                        <Link to={'#'}><HomeCard key={item.id} image={item.image} title={item.title} /></Link>
                     )
                 })}
             </div>
