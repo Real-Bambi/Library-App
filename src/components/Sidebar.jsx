@@ -1,17 +1,15 @@
 import { Home, Search, LibraryBig, HandHeart } from 'lucide-react';
 import { Link } from "react-router";
+import Log2 from "../assets/images/log2.png"
 
 export default function Sidebar() {
 return (
     
  
-  <aside className="w-70 h-screen bg-[#FBDB93] text-black flex flex-col justify-between py-8 px-6 shadow-xl shadow-blue-300">
+  <aside className="w-50 h-screen fixed bg-[#FBDB93] text-black flex flex-col justify-between py-8 px-6 shadow-xl shadow-blue-300">
     <div>
-      <div className="mb-10 text-left">
-        <h1 className="text-xl leading-none italic tracking-wide">
-          My <span className="text-[#BE5B50] text-xl font-medium">Book</span><br />
-          <span className="tracking-widest text-3xl">Shelf</span>
-        </h1>
+      <div className="mb-20 text-left h-[80px] w-30">
+        <img src={Log2} alt="logo" />
       </div>
 
       
@@ -19,7 +17,7 @@ return (
         <Link to="/" className="flex items-center gap-3 hover:text-[#BE5B50]">
          <Home /> Home
         </Link>
-        <Link to="/not-found" className="flex items-center gap-3 hover:text-[#BE5B50]">
+        <Link to="#" className="flex items-center gap-3 hover:text-[#BE5B50]">
           <Search /> Search
         </Link>
         <Link to="/book-page" className="flex items-center gap-3 hover:text-[#BE5B50]">

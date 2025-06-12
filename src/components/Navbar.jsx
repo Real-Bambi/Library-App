@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { LibraryBig, Search, User, Menu, X, Plus, View } from 'lucide-react';
 import { Link } from "react-router";
-import Log2 from "../assets/images/log2.png"
 
 export default function LibraryNavbar() {
     const [mobileOpen, setMobileOpen] = useState(false);
@@ -11,7 +10,7 @@ export default function LibraryNavbar() {
             <div className="max-w-7xl mx-auto flex items-center justify-between">
 
                 <div className="hidden md:flex items-center gap-8 text-gray-900">
-                    <img src={Log2} alt="" className='h-[60px] w-20 ml-10 '/>
+                    
 
                     <Link to="#" className="hover:text-[#FBDB93]">
                         <select name="" id="" className='border-none outline-none'><option className='text-gray-900' disabled selected>Categories</option>
