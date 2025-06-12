@@ -42,15 +42,15 @@ function ViewBook () {
             <h1 className="text-3xl text-[#8a2d3b] font-bold mb-2 flex justify-center">{book.title}</h1>
             <h2 className="text-xl text-[#641b2e] mb-4 flex justify-center">by {book.author}</h2>
             <p className="text-md text-[#633642]">{book.description}</p>
-            <p className="text-sm text-[#633642] mt-4">Published on: {book.publishedDate}</p>
+            <p className="text-sm text-[#633642] mt-4 flex justify-center">Published on: {book.publishedDate}</p>
 
             <div className="pt-1 flex flex-col sm:flex-row gap-100">
-              <button
-                onClick={() => window.location.href = '/'}
+              <Link to ="/"
+               
                 className="bg-[#be5b50] hover:bg-[#8a2d3b] text-white px-4 py-2 rounded"
               >
                 ← Back to Home
-              </button>
+              </Link>
               <button
                 onClick={() => alert('Delete Book Clicked')}
                 className="bg-[#be5b50] hover:bg-[#8a2d3b] text-white px-4 py-2 rounded"
