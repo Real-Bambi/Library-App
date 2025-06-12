@@ -1,31 +1,39 @@
-
-import Navbar from '../components/Navbar'; 
+import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 import BookCard from '../components/BookCard';
-
+import { useState, useEffect } from 'react';
+import { apiClient } from '../api/client';
 
 const BookPage = () => {
-  const repeated = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  const [books, setBooks] = useState([]);
+
+  const getBooks = () => {
+    apiClient.get("/books")
+      .then((response) => {
+        console.log(response.data);
+        setBooks(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  useEffect(getBooks, []);
 
   return (
-    <>
-    <div className="min-h-screen bg-gray-100 text-gray-700 flex flex-row gap-8 ">
-         <Sidebar />
-     
-
+    <div className="min-h-screen bg-[#fbdb93] text-[#8a2d3b] flex flex-row gap-8">
+      <Sidebar />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 px-6 mx-auto gap-8">
-        {repeated.map((n) => (
+        {books.map((book) => (
           <div
-            key={n}
-            onClick={() => window.location.href = `/books/${book.id}`}
+            key={book.id}
             className="cursor-pointer group"
           >
-            <BookCard />
+            <BookCard book={book} />
           </div>
         ))}
       </div>
     </div>
-    </>
   );
 };
 

@@ -1,53 +1,67 @@
 
+import { useEffect, useState } from 'react';
 import Sidebar from '../components/Sidebar';
 import { Link } from 'react-router';
+import { useSearchParams } from 'react-router';
+import { apiClient } from '../api/client';
 
-const book = {
-  id: '',
-  title: 'Rich Dad Poor Dad',
-  author: 'Robert T. Kiyosaki',
-  image: 'https://m.media-amazon.com/images/I/81BE7eeKzAL._SL1500_.jpg',
-  description:
-    'Rich Dad Poor Dad is a personal finance classic that contrasts the financial philosophies of two father figures in the author\'s life. It emphasizes the importance of financial education, investing, and entrepreneurship over traditional employment and saving. The book advocates for building assets that generate passive income, challenging conventional beliefs about money and wealth creation.',
-  publishedDate: 'April 2, 1997',
-};
 
-const ViewBook = () => {
+
+function ViewBook () {
+  const [searchParams] = useSearchParams();
+  const id = searchParams.get('id');
+
+  const [book, setBook] = useState({});
+
+  const getBook = () => {
+    apiClient.get(`/books/${id}`)
+      .then((response) => {
+        console.log(response.data);
+        setBook(response.data.data);
+       
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
+
+  useEffect(getBook, []);
+
   return (
-    <> 
-    
-    <div className="min-h-screen bg-gray-100 text-gray-700 flex flex-row gap-8">
-        <Sidebar />
-      <div className="bg-white rounded-lg overflow-hidden shadow-lg w-full max-w-3xl mx-auto pt-2">
-        <img
-          src={book.image}
-          alt={book.title}
-          className="w-full h-96 object-contain bg-white p-4"
-        />
-        <div className="p-6">
-          <h1 className="text-3xl font-bold mb-2 flex justify-center">{book.title}</h1>
-          <h2 className="text-xl text-gray-600 mb-4 flex justify-center">by {book.author}</h2>
-          <p className="text-md text-gray-500">{book.description}</p>
-            <p className="text-sm text-gray-400 mt-4">Published on: {book.publishedDate}</p>
+    <>
 
-          <div className="pt-1 flex flex-col sm:flex-row gap-100">
-            <button
-              onClick={() => window.location.href = '/'}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded"
-            >
-              ← Back to Home
-            </button>
-            <button
-              onClick={() => alert('Add Book Clicked')}
-              className="bg-red-400 hover:bg-red-600 text-white px-4 py-2 rounded"
-            >
-              Delete Book
-            </button>
+      <div className="min-h-screen bg-[#fbdb93] text-gray-700 flex flex-row gap-8">
+        <Sidebar />
+        <div className="bg-[#fbdb93] rounded-lg overflow-hidden shadow-[0_4px_8px_#8a2d3b55] w-full max-w-3xl mx-auto pt-2">
+          <img
+            src={book.image}
+            alt={book.title}
+            className="w-full h-96 object-contain bg-[#fbdb93] p-4"
+          />
+          <div className="p-6">
+            <h1 className="text-3xl text-[#8a2d3b] font-bold mb-2 flex justify-center">{book.title}</h1>
+            <h2 className="text-xl text-[#641b2e] mb-4 flex justify-center">by {book.author}</h2>
+            <p className="text-md text-[#633642]">{book.description}</p>
+            <p className="text-sm text-[#633642] mt-4">Published on: {book.publishedDate}</p>
+
+            <div className="pt-1 flex flex-col sm:flex-row gap-100">
+              <button
+                onClick={() => window.location.href = '/'}
+                className="bg-[#be5b50] hover:bg-[#8a2d3b] text-white px-4 py-2 rounded"
+              >
+                ← Back to Home
+              </button>
+              <button
+                onClick={() => alert('Delete Book Clicked')}
+                className="bg-[#be5b50] hover:bg-[#8a2d3b] text-white px-4 py-2 rounded"
+              >
+                Delete Book
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-     </>
+    </>
   );
 };
 
