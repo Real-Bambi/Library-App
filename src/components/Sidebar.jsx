@@ -23,7 +23,7 @@ return (
         <Link to="/book-page" className="flex items-center gap-3 hover:text-[#BE5B50]">
            <LibraryBig /> My Shelf
         </Link>
-        <Link to="/create-book" className="flex items-center gap-3 hover:text-[#BE5B50]">
+        <Link to="/view-book" className="flex items-center gap-3 hover:text-[#BE5B50]">
            <HandHeart /> View Book
         </Link>
       </nav>
