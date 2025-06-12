@@ -24,7 +24,7 @@ return (
            <LibraryBig /> My Shelf
         </Link>
         <Link to="/create-book" className="flex items-center gap-3 hover:text-[#BE5B50]">
-           <HandHeart /> Add Book
+           <HandHeart /> View Book
         </Link>
       </nav>
     </div>

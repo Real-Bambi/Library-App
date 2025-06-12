@@ -13,7 +13,7 @@ export default function LibraryNavbar() {
                     
 
                     <Link to="#" className="hover:text-[#FBDB93]">
-                        <select name="" id="" className='border-none outline-none'><option className='text-gray-900' disabled selected>Categories</option>
+                        <select name="" id="" className='border-none outline-none'><option className='text-gray-900 font-bold' disabled selected>Categories</option>
                             <option className='text-gray-900' value="">Fiction</option>
                             <option className='text-gray-900' value="">History</option>
                             <option className='text-gray-900' value="">Science</option>
