@@ -31,9 +31,9 @@ export default function CreateBook() {
             <div className="min-h-screen bg-gray-100 text-gray-700 flex flex-row gap-8 ">
                 <Sidebar />
 
-                <div className="flex flex-row w-[90%] gap-x-20 m-auto pt-10">
-                    <div className="w-[50%]">
-                        <form onSubmit={postBook} className="bg-white p-8 rounded-lg shadow-md border border-gray-300  py-6 px-10 flex flex-col  ">
+                <div className="flex flex-row w-[80%] ml-[20%] gap-4 pt-10">
+                    <div className="w-[50%] ">
+                        <form onSubmit={postBook} className="bg-white p-8 rounded-lg shadow-md border border-gray-300  py-6 px-10 flex flex-col   ">
                             <div className="text-3xl font-bold m-auto"><h1>Fill Up Book Details</h1></div>
                             <div className="flex flex-col p-4">
                                 <label htmlFor="type">Book Title</label>
@@ -79,14 +79,14 @@ export default function CreateBook() {
                             </div>
 
 
-                            <div className="flex flex-row gap-10">
+                            <div className="flex flex-row px-4 py-2">
                              <SubmitButton title={"Update Book"}/>
                             </div>
 
                         </form>
                     </div>
-                    <div className="flex flex-col p-4  ">
-                        <h1 className="text-4xl font-bold pb-15">Your <span className="text-amber-500"> Input </span> <br />Helps Others To Read</h1>
+                    <div className="flex flex-col p-4 w-[50%]  ">
+                        <h1 className="text-4xl font-bold pb-15">Your <span className="text-[#fcd271]"> Input </span> <br />Helps Others To Read</h1>
                         <p className="text-3xl ">Most purchased books.</p>
                     </div>
                 </div>
