@@ -21,9 +21,9 @@ const BookPage = () => {
   useEffect(getBooks, []);
 
   return (
-    <div className="min-h-screen bg-[#fbdb93] text-[#8a2d3b] flex flex-row gap-8">
+    <div className="min-h-screen bg-[#9e9277] text-[#8a2d3b] flex flex-row gap-8 ">
       <Sidebar />
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 px-6 mx-auto gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 pl-53 pr-5 mx-auto gap-8 ">
         {books.map((book) => (
           <div
             key={book.id}

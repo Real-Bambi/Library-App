@@ -30,13 +30,13 @@ function ViewBook () {
   return (
     <>
 
-      <div className="min-h-screen bg-[#fbdb93] text-gray-700 flex flex-row gap-8">
-        <Sidebar />
-        <div className="bg-[#fbdb93] rounded-lg overflow-hidden shadow-[0_4px_8px_#8a2d3b55] w-full max-w-3xl mx-auto pt-2">
+      <div className="min-h-screen bg-[#9e9277] text-gray-700 flex flex-row gap-8 ">
+        <Sidebar  />
+        <div className="bg-[#f8d584] rounded-lg overflow-hidden shadow-[0_4px_8px_#8a2d3b55] w-full max-w-3xl   pt-2   ml-100">
           <img
             src={book.image}
             alt={book.title}
-            className="w-full h-96 object-contain bg-[#fbdb93] p-4"
+            className="w-full h-96 object-contain bg-[#f8d584] p-4"
           />
           <div className="p-6">
             <h1 className="text-3xl text-[#8a2d3b] font-bold mb-2 flex justify-center">{book.title}</h1>
@@ -44,12 +44,12 @@ function ViewBook () {
             <p className="text-md text-[#633642]">{book.description}</p>
             <p className="text-sm text-[#633642] mt-4 flex justify-center">Published on: {book.publishedDate}</p>
 
-            <div className="pt-1 flex flex-col sm:flex-row gap-100">
-              <Link to ="/"
+            <div className="pt-1 flex flex-col sm:flex-row justify-between px-4">
+              <Link to ="/book-page"
                
                 className="bg-[#be5b50] hover:bg-[#8a2d3b] text-white px-4 py-2 rounded"
               >
-                ← Back to Home
+                ← Back 
               </Link>
               <button
                 onClick={() => alert('Delete Book Clicked')}
