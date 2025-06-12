@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import { apiClient } from "../api/client";
+import SubmitButton from "../components/SubmitButton";
 
 export default function CreateBook() {
 
@@ -15,7 +16,7 @@ export default function CreateBook() {
               "Content-Type": "application/json"
             }
         })
-        .then((response) =>{
+        .then((response) => {
             console.log(response);
         })
         .catch((error) => {
@@ -23,7 +24,7 @@ export default function CreateBook() {
         })
 
     }
-
+ 
     return (
         <>
             <Navbar />
@@ -32,7 +33,7 @@ export default function CreateBook() {
 
                 <div className="flex flex-row w-[90%] gap-x-20 m-auto pt-10">
                     <div className="w-[50%]">
-                        <form onSubmit={postBook} className="bg-white p-8 rounded-lg shadow-md border border-gray-300  mx-auto py-6 px-10 flex flex-col  ">
+                        <form onSubmit={postBook} className="bg-white p-8 rounded-lg shadow-md border border-gray-300  py-6 px-10 flex flex-col  ">
                             <div className="text-3xl font-bold m-auto"><h1>Fill Up Book Details</h1></div>
                             <div className="flex flex-col p-4">
                                 <label htmlFor="type">Book Title</label>
@@ -79,9 +80,9 @@ export default function CreateBook() {
 
 
                             <div className="flex flex-row gap-10">
-                                <button type="submit" className=" bg-amber-600 py-2 px-6 font-bold p-4 rounded-md">Add Book </button>
-                                <button type="submit" className="  bg-amber-600 py-2 px-6 font-bold p-4 rounded-md">Cancel</button>
+                             <SubmitButton title={"Update Book"}/>
                             </div>
+
                         </form>
                     </div>
                     <div className="flex flex-col p-4  ">
