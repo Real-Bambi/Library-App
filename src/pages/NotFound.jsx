@@ -11,7 +11,7 @@ export default function NotFound() {
             
 
             <div>
-                <Link to="/"><button className="rounded-[10px] font-extrabold animate-none bg-black text-[2opx] text-yellow-300 items-center p-4 hover: cursor-pointer  ml-70">HOMEPAGE</button></Link>
+                <Link to="/"><button className="rounded-[10px] font-extrabold animate-none bg-black text-[2opx] text-[#FCF259] items-center p-4 hover: cursor-pointer  ml-70">HOMEPAGE</button></Link>
 
             </div>
         </>
