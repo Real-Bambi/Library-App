@@ -37,8 +37,8 @@ export default function LibraryNavbar() {
             <Search className="w-5 h-5 text-gray-900 hover:text-[#FBDB93] cursor-pointer" />
           </div>
 
-          <Link to="/login">
-            <button className="p-2 px-4 rounded-lg bg-[#FBDB93] text-black font-bold transition">LOGIN</button>
+          <Link to="/create-book">
+            <button className="p-2 px-4 rounded-lg bg-[#FBDB93] text-black font-bold transition">GET STARTED</button>
           </Link>
 
           <User className="w-5 h-5 text-gray-900 hover:text-[#FBDB93] cursor-pointer" />
