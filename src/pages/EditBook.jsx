@@ -50,7 +50,7 @@ export default function EditBook() {
 
         <>
             <Navbar />
-            <div className="min-h-screen bg-gray-100 text-gray-700 flex flex-row gap-8 hidden lg:block ">
+            <div className="min-h-screen bg-gray-100 text-gray-700 flex flex-row gap-8 ">
                 <Sidebar />
                 </div>
 
