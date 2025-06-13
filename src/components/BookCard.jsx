@@ -19,40 +19,34 @@ export default function BookCard({ book }) {
 
                     <div className="flex gap-15 justify-between pt-1 flex-col sm:flex-row items-center">
 
-                        <div className="relative group w-full sm:w-auto ">
-                            <Link to={`/view-book?id=${book.id}`}>
-                                <button
-                                    className="bg-[#be5b50] hover:bg-[#8a2d3b] text-white p-2 rounded-md shadow-md hover:shadow-lg transition"
-                                    aria-label="Add Book"
-                                >
+                        <div className="flex flex-col sm:flex-row gap-3 justify-between pt-1 items-center md:gap-20 ">
+                            <Link to={`/view-book?id=${book.id}`}
 
-                                    View Book
-                                </button>
+                                className="bg-[#be5b50] hover:bg-[#8a2d3b] text-white p-2 rounded-md shadow-md hover:shadow-lg transition w-full sm:w-auto text-center"
+                                aria-label="Add Book"
+                            >
+
+                                View Book
+
                             </Link>
 
-                        </div>
+                            <Link
+                                to={`/edit-book?id=${book.id}`}
+                                className="bg-[#8a2d3b] hover:bg-[#641b2e] text-white p-2 rounded-4xl shadow-md hover:shadow-lg transition w-full sm:w-auto flex items-center justify-center "
+                                aria-label="Edit Book">
 
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-5 w-5 mr-1"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    strokeWidth={2}
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536M9 11l6-6 3.536 3.536-6 6H9v-3z" />
+                                </svg>
 
-                        <div className="relative group w-ful sm:w-auto">
-
-                            <button
-                                className="bg-[#8a2d3b] hover:bg-[#641b2e] text-white p-2 rounded-4xl shadow-md hover:shadow-lg transition"
-                                aria-label="Edit Book"
-                            >
-                                <Link to={(`/edit-book?id=${book.id}`)}>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="h-5 w-5"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        strokeWidth={2}
-                                    >
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536M9 11l6-6 3.536 3.536-6 6H9v-3z" />
-                                    </svg> </Link>
-                                <span className="sr-only">Edit Book</span>
-                            </button>
-
+                            </Link>
 
 
                             <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 bg-[#774754] text-[#fbdb93] text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition pointer-events-none z-10 whitespace-nowrap">
