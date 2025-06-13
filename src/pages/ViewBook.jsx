@@ -46,7 +46,7 @@ function ViewBook () {
 
       <div className="min-h-screen bg-[#f3fdf] text-gray-700 flex flex-col lg:flex-row gap-4 lg:gap-8 ">
         <Sidebar  />
-        <div className="flex-1 flex flex-col justify-between bg-white rounded-lg overflow-hidden hover:shadow-[0_4px_8px_#faedcf] shadow-2xl w-full lg:max-w-3xl   pt-2 mx-4 lg:mx-auto  lg:ml-100 ">
+        <div className="flex-1 flex flex-col justify-between bg-white rounded-lg overflow-hidden shadow-2xl w-full lg:max-w-3xl   pt-2 mx-4 lg:mx-auto  lg:ml-100 ">
           <img
             src={book.image}
             alt={book.title}
