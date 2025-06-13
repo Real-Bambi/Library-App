@@ -6,7 +6,7 @@ export default function LibraryNavbar() {
     const [mobileOpen, setMobileOpen] = useState(false);
 
     return (
-        <nav className="bg-[#BE5B50] shadow-md px-6 py-4 h-18  mt-4">
+        <nav className="bg-[#BE5B50] fixed shadow-md px-6 py-4 h-18  mt-4">
             <div className="max-w-7xl mx-auto flex items-center justify-between">
 
                 <div className="hidden md:flex items-center gap-8 text-gray-900">
