@@ -3,12 +3,12 @@ import { Link } from "react-router";
 export default function BookCard({ book }) {
     return (
         <>
-            <div className="bg-[#faedcf] rounded-lg overflow-hidden shadow-[0_4px_8px_#8a2d3b55] hover:shadow-amber-950 transform hover:scale-[1.02] transition pt-2 group cursor-pointer">
+            <div className="bg-[#faedcf] rounded-lg overflow-hidden shadow-[0_4px_8px_#8a2d3b55] hover:shadow-amber-950 transform hover:scale-[1.02] transition pt-2 group cursor-pointer w-full sm:max-w-md lg:max-w-lg">
 
                 <img
                     src={book.image}
                     alt={book.title}
-                    className="w-full h-60 overflow-auto object-contain group-hover:opacity-90 transition bg-[#faedcf] p-1"
+                    className="w-full h-60 overflow-auto object-contain group-hover:opacity-90 transition bg-[#faedcf] p-1 sm:h-64 md:h-72"
                 />
 
                 <div className="p-4">
@@ -17,12 +17,12 @@ export default function BookCard({ book }) {
                     <p className="text-sm text-gray-500 mb-4 line-clamp-2">{book.description}</p>
 
 
-                    <div className="flex gap-15 justify-between pt-1">
+                    <div className="flex gap-15 justify-between pt-1 flex-col sm:flex-row items-center">
 
-                        <div className="relative group">
+                        <div className="relative group w-full sm:w-auto ">
                             <Link to={`/view-book?id=${book.id}`}>
                                 <button
-                                    className="bg-[#be5b50] hover:bg-[#8a2d3b] text-white p-2 rounded-xl shadow-md hover:shadow-lg transition"
+                                    className="bg-[#be5b50] hover:bg-[#8a2d3b] text-white p-2 rounded-md shadow-md hover:shadow-lg transition"
                                     aria-label="Add Book"
                                 >
 
@@ -33,10 +33,10 @@ export default function BookCard({ book }) {
                         </div>
 
 
-                        <div className="relative group">
+                        <div className="relative group w-ful sm:w-auto">
 
                             <button
-                                className="bg-[#8a2d3b] hover:bg-[#641b2e] text-white p-2 rounded-xl shadow-md hover:shadow-lg transition"
+                                className="bg-[#8a2d3b] hover:bg-[#641b2e] text-white p-2 rounded-4xl shadow-md hover:shadow-lg transition"
                                 aria-label="Edit Book"
                             >
                                 <Link to={(`/edit-book?id=${book.id}`)}>
