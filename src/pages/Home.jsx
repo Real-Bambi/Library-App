@@ -25,14 +25,14 @@ const cards = [
 
     return (
 
-      <div className=' h-full'>
+      <div className=' h-full min-h-screen'>
         {/* <div className="absolute inset-1 bg-gradient-to-r from-black-700 via-black/50 to-black/90 z-2"></div> */}
         
-          <div className="  bg-[url('./assets/images/booklib.jpg'))] bg-cover h-[100vh] md:h-full ">
+          <div className="  bg-[url('./assets/images/booklib.jpg'))] bg-cover h-[100vh] md:h-full sm:bg-top ">
           
 
             <div >
-                <h1 className="font-bold text-center text-6xl pt-10"><span className="text-white">Welcome to</span> <span className="text-[#BE5B50] "> BOOK SHELF</span>.</h1>
+                <h1 className="font-bold text-center text-6xl pt-10 sm:text-5xl"><span className="text-white">Welcome to</span> <span className="text-[#BE5B50] "> BOOK SHELF</span>.</h1>
                 <h2 className='font-medium text-center text-5xl pt-10 text-white'>Discover the best books <span className="text-[#FBDB93]">HERE!</span></h2>
                 {/* <ArrowBigDown className=' flex flex-col size-30 items-center text-red-400 animate-bounce'/> */}
             </div>
