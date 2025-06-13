@@ -27,29 +27,30 @@ function ViewBook () {
 
   useEffect(getBook, []);
 
+  
   return (
     <>
 
-      <div className="min-h-screen bg-[#fbdb93] text-gray-700 flex flex-row gap-8">
-        <Sidebar />
-        <div className="bg-[#fbdb93] rounded-lg overflow-hidden shadow-[0_4px_8px_#8a2d3b55] w-full max-w-3xl mx-auto pt-2">
+      <div className="min-h-screen bg-[#9e9277] text-gray-700 flex flex-col lg:flex-row gap-4 lg:gap-8 ">
+        <Sidebar  />
+        <div className="bg-[#f8d584] rounded-lg overflow-hidden shadow-[0_4px_8px_#8a2d3b55] w-full lg:max-w-3xl   pt-2 mx-auto   lg:ml-100">
           <img
             src={book.image}
             alt={book.title}
-            className="w-full h-96 object-contain bg-[#fbdb93] p-4"
+            className="w-full h-64 sm:h-80 md:h-96 object-contain bg-[#f8d584] p-4"
           />
-          <div className="p-6">
-            <h1 className="text-3xl text-[#8a2d3b] font-bold mb-2 flex justify-center">{book.title}</h1>
-            <h2 className="text-xl text-[#641b2e] mb-4 flex justify-center">by {book.author}</h2>
+          <div className="sm:p-6 p-4">
+            <h1 className="sm:text-3xl text-[#8a2d3b] font-bold mb-2 flex justify-center text-2xl">{book.title}</h1>
+            <h2 className="sm:text-xl text-[#641b2e] mb-4 flex justify-center text-lg text-center">by {book.author}</h2>
             <p className="text-md text-[#633642]">{book.description}</p>
-            <p className="text-sm text-[#633642] mt-4 flex justify-center">Published on: {book.publishedDate}</p>
+            <p className="text-sm text-[#633642] mt-4 flex justify-center text-center">Published on: {book.publishedDate}</p>
 
-            <div className="pt-1 flex flex-col sm:flex-row gap-100">
-              <Link to ="/"
+            <div className="pt-1 flex flex-col sm:flex-row justify-between items-center px-4">
+              <Link to ="/book-page"
                
-                className="bg-[#be5b50] hover:bg-[#8a2d3b] text-white px-4 py-2 rounded"
+                className="bg-[#be5b50] hover:bg-[#8a2d3b] text-white px-4 py-2 rounded w-full sm:w-auto text-center"
               >
-                ← Back to Home
+                ← Back 
               </Link>
               <button
                 onClick={() => alert('Delete Book Clicked')}

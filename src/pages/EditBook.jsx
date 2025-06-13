@@ -55,9 +55,10 @@ export default function EditBook() {
                 <Sidebar />
 
 
-                <div className="bg-amber-200 p-10 w-[50%] rounded-lg flex flex-col items-center absolute top-[20%] left-[35%] h-[80%]">
-                    <p className="text-3xl font-bold">Edit Book</p>
-                    <form onSubmit={putBook} className="bg-[rgba(255,255,255,0.4)] w-[90%] h-[60%] rounded-lg shadow-md border border-gray-300 p-8 py-6 px-10 flex flex-col">
+                <div className="bg-[#FBDB93] px-10 w-[50%] rounded-lg  shadow-md flex flex-col items-center absolute top-[20%] left-[35%] h-[110vh]">
+                    <p className="text-3xl font-extrabold p-4">Edit Book</p>
+
+                    <form onSubmit={putBook} className="bg-[rgba(255,255,255,0.4)] w-[100%] h-[80%] rounded-lg shadow-md border border-gray-300 p-8 py-6 px-10 flex flex-col">
                         <div className="flex flex-row px-4 py-2 justify-between">
                             <div className="flex flex-col">
                                 <label htmlFor="type">Book Title</label>
@@ -71,7 +72,7 @@ export default function EditBook() {
                         <div className="flex flex-row px-4 py-2 justify-between ">
                             <div className="flex flex-col">
                                 <label htmlFor="type">Publication Year</label>
-                                <input type="number" name="publicationYear" placeholder="Enter Publication Year" className=" py-2 rounded-md border pr-12" defaultValue={book.publicationYear} /></div>
+                                <input type="number" name="publicationYear" placeholder="Enter Publication Year" className=" py-2 rounded-md border " defaultValue={book.publicationYear} /></div>
 
                             <div className="flex flex-col">
                                 <label htmlFor="type">ISB Number</label>
@@ -81,27 +82,14 @@ export default function EditBook() {
                         </div>
 
                         <div className="flex flex-row px-4 py-2 justify-between">
-
-
                             <div className="flex flex-col">
-                                <label htmlFor="type">Publication Company</label>
-                                <input type="text" name="publishingCompany" placeholder="Enter Publication Company" className=" p-2 rounded-md border" defaultValue={book.publishingCompany} />
+                                <label htmlFor="type">Publishing Company</label>
+                                <input type="text" name="publishingCompany" placeholder="Enter Publishing Company" className=" p-2 rounded-md border" defaultValue={book.publishingCompany} />
                             </div>
 
-                        </div>
-
-
-
-                        <div className="bg-[rgba(255,255,255,0.4)] w-[100%] h-[20%] rounded-lg shadow-md border border-gray-300  mx-auto py-2 px-10  ">
-                            <div className="flex flex-row gap-4 justify-evenly">
-                                <div className="flex flex-col gap-2 px-12 pb-2">
-                                    <label htmlFor="file">Synopsis</label>
-                                    <input type="text" name="synopsis" placeholder="Enter Book Synopsis" className=" p-2 rounded-md border" defaultValue={book.synopsis} />
-                                </div>
-
-                                <div className="flex flex-col gap-2 pb-2">
+                             <div className="flex flex-col ">
                                     <label htmlFor="type">Genre</label>
-                                    <select name="genre" id="" placeholder="Enter Book Name" className="px-6 rounded-md border h-10" defaultValue={book.genre} >
+                                    <select name="genre" id="" placeholder="Enter Book Name" className="p-2  rounded-md border " defaultValue={book.genre} >
                                         <option selected disabled>Choose Genre</option>
                                         <option value="history">History</option>
                                         <option value="horror">Horror</option>
@@ -112,10 +100,19 @@ export default function EditBook() {
                                     </select>
                                 </div>
 
-                            </div>
                         </div>
-                        <div className="flex flex-row gap-10">
-                            <SubmitButton title={"Save Changes"}/>
+
+                            <div className="px-4 py-2">
+                                <div className="flex flex-col">
+                                    <label htmlFor="file">Synopsis</label>
+                                    <input type="text" name="synopsis" placeholder="Enter Book Synopsis" className=" p-2 rounded-md border pb-40" defaultValue={book.synopsis} />
+                                </div>
+
+
+                            </div>
+                        
+                        <div className="flex flex-row px-4 py-2 justify-between">
+                            <SubmitButton title={"Save Changes"} />
                             <SubmitButton title={"Cancel"}/>
                         </div>
                     </form>

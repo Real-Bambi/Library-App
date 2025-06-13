@@ -6,14 +6,15 @@ export default function LibraryNavbar() {
     const [mobileOpen, setMobileOpen] = useState(false);
 
     return (
-        <nav className="bg-[#BE5B50] shadow-md px-6 py-4 h-18  mt-4">
+        <nav className="bg-[#BE5B50] fixed w-screen z-auto shadow-md px-6 py-4 h-18">
             <div className="max-w-7xl mx-auto flex items-center justify-between">
 
                 <div className="hidden md:flex items-center gap-8 text-gray-900">
-                    
 
-                    <Link to="#" className="hover:text-[#FBDB93]">
-                        <select name="" id="" className='border-none outline-none'><option className='text-gray-900' disabled selected>Categories</option>
+
+                    <Link to="#" className="hover:text-[#FBDB93] font-bold">
+                        <select name="" id="" className='border-none outline-none'>
+                            <option className='text-gray-900 ' disabled selected>Categories</option>
                             <option className='text-gray-900' value="">Fiction</option>
                             <option className='text-gray-900' value="">History</option>
                             <option className='text-gray-900' value="">Science</option>
@@ -23,19 +24,13 @@ export default function LibraryNavbar() {
                         </select>
                     </Link>
 
-                    <span className='gap-0 flex  hover:text-[#FBDB93]'><Plus className="w-5 h-5 text-gray-900 cursor-pointer ml-20 font-bold" />
-                        <Link to="/create-book" className="font-bold">Add Book</Link></span>
-
-
-                    <span className='gap-0 flex hover:text-[#FBDB93]'><View className="w-5 h-5 text-gray-900 cursor-pointer font-bold" />
-                        <Link to="/book-page" className="font-bold">All Books</Link></span>
                 </div>
 
 
                 <div className="hidden md:flex items-center gap-6">
                     <div className='flex'><input type="text" placeholder="Search books..." className="bg-transparent focus:outline-none w-full md:w-64 text-sm" />
                         <Search className="w-5 h-5 text-gray-900 hover:text-[#FBDB93] cursor-pointer" />
-                        
+
                     </div>
 
                     <button className='p-2 rounded-[10px] bg-[#FBDB93] font-bold ml-10'><a href="#">LOGIN</a></button>

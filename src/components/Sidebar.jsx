@@ -6,9 +6,9 @@ export default function Sidebar() {
 return (
     
  
-  <aside className="w-50 h-screen fixed bg-[#FBDB93] text-black flex flex-col justify-between py-8 px-6 shadow-xl shadow-blue-300">
+  <aside className="w-50 h-screen fixed bg-[#FBDB93] text-black flex flex-col justify-between py-8 px-6 shadow-xl shadow-blue-300  " >
     <div>
-      <div className="mb-20 text-left h-[80px] w-30">
+      <div className="mb-20 text-left h-[80px] w-32">
         <img src={Log2} alt="logo" />
       </div>
 
