@@ -4,8 +4,8 @@ import { apiClient } from "../api/client";
 import SubmitButton from "../components/SubmitButton";
 import { useNavigate } from "react-router";
 import Love from "../assets/images/img1.jpg"
-import Hope from "../assets/images/img2.jpg"
-import Faith from "../assets/images/img3.jpg"
+import Hope from "../assets/images/img4.jpg"
+import Faith from "../assets/images/img5.jpg"
 
 export default function CreateBook() {
     const navigate = useNavigate();
@@ -94,7 +94,7 @@ export default function CreateBook() {
                         <p className="text-3xl ">Most purchased books.</p>
 
                         <div className=" lg:h-[50vh] lg:pt-20 pt-15 gap-2 flex flex-col lg:flex-row ">
-                            <div className="flex flex-col p-6 bg-amber-100  rounded-2xl h-[50vh] ">
+                            <div className="flex flex-col p-6 bg-white  rounded-2xl h-[50vh] ">
                                 <img src={Love} alt="image" />
                                 <div className="text-lg font-medium ">
                                     <p >High Lifestyle</p>
@@ -102,16 +102,16 @@ export default function CreateBook() {
                                     <p>14K readers</p>
                                 </div>
                             </div>
-                            <div className="flex flex-col p-6 bg-amber-100  rounded-2xl h-[50vh]">
-                                <img src={Love} alt="image" />
+                            <div className="flex flex-col p-6 bg-white  rounded-2xl h-[50vh]">
+                                <img src={Hope} alt="image" />
                                 <div className="text-lg font-medium ">
                                     <p >High Lifestyle</p>
                                     <p>Steve Wonders, 2000</p>
                                     <p>14K readers</p>
                                 </div>
                             </div>
-                            <div className="flex flex-col p-6 bg-amber-100  rounded-2xl h-[50vh]">
-                                <img src={Love} alt="image" />
+                            <div className="flex flex-col p-6 bg-white  rounded-2xl h-[50vh]">
+                                <img src={Faith} alt="image" />
                                 <div className="text-lg font-medium ">
                                     <p >High Lifestyle</p>
                                     <p>Steve Wonders, 2000</p>
