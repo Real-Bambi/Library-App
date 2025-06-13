@@ -19,7 +19,7 @@ export default function BookCard({ book }) {
 
                     <div className="flex gap-15 justify-between pt-1 flex-col sm:flex-row items-center">
 
-                        <div className="flex flex-col sm:flex-row gap-3 justify-between pt-1 items-center md:gap-20 ">
+                        <div className=" flex flex-col sm:flex-row gap-3 justify-between pt-1 items-center md:gap-20 ">
                             <Link to={`/view-book?id=${book.id}`}
 
                                 className="bg-[#be5b50] hover:bg-[#8a2d3b] text-white p-2 rounded-md shadow-md hover:shadow-lg transition w-full sm:w-auto text-center"
@@ -29,6 +29,8 @@ export default function BookCard({ book }) {
                                 View Book
 
                             </Link>
+
+                             <div className="relative group">
 
                             <Link
                                 to={`/edit-book?id=${book.id}`}
@@ -45,13 +47,15 @@ export default function BookCard({ book }) {
                                 >
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536M9 11l6-6 3.536 3.536-6 6H9v-3z" />
                                 </svg>
+                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-[#774754] text-[#fbdb93] text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition pointer-events-none z-10 whitespace-nowrap">
+                                    Edit Book
+                                </div>
 
                             </Link>
+                           </div>
 
 
-                            <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 bg-[#774754] text-[#fbdb93] text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition pointer-events-none z-10 whitespace-nowrap">
-                                Edit Book
-                            </div>
+
                         </div>
 
 
